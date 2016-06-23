@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -61,6 +62,7 @@ public class MainActivity extends Activity {
        // String path="sdcard/camera_app/cam_image.jpg";
         if(resultCode==RESULT_OK){
             if(data!=null) {
+                Log.i("dataa", "recieved non null intent");
                 Bundle extras = data.getExtras();
                 bmp = (Bitmap) extras.get("data");
                 imageView.setImageBitmap(bmp);
