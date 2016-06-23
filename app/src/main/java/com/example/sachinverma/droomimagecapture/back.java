@@ -4,9 +4,6 @@ package com.example.sachinverma.droomimagecapture;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -15,7 +12,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import java.io.File;
-import java.io.InputStream;
 
 /**
  * Created by Sachin Verma on 6/17/2016.
@@ -84,9 +80,11 @@ public class back extends Activity {
         //String path = "sdcard/camera_app/cam_image_back.jpg";
         //imageView.setImageDrawable(Drawable.createFromPath(path));
         if(resultCode==RESULT_OK){
-            Bundle extras=data.getExtras();
-            bmp=(Bitmap) extras.get("data");
-            imageView.setImageBitmap(bmp);
+            if(data!=null) {
+                Bundle extras = data.getExtras();
+                bmp = (Bitmap) extras.get("data");
+                imageView.setImageBitmap(bmp);
+            }
         }
 
 
