@@ -80,11 +80,10 @@ public class back extends Activity {
         //String path = "sdcard/camera_app/cam_image_back.jpg";
         //imageView.setImageDrawable(Drawable.createFromPath(path));
         if(resultCode==RESULT_OK){
-            if(data!=null) {
+
                 Bundle extras = data.getExtras();
                 bmp = (Bitmap) extras.get("data");
                 imageView.setImageBitmap(bmp);
-            }
         }
 
 
