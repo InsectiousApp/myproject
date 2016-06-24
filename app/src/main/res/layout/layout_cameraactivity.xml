@@ -1,10 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-    <Button android:id="@+id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Click Photo"></Button>
-    <ImageView android:id="@+id/imageView1" android:layout_height="wrap_content" android:src="@mipmap/ic_launcher" android:layout_width="wrap_content"></ImageView>
+    android:layout_height="fill_parent">
+
+    <ImageView android:id="@+id/cameraactivity_ivClickPhoto" android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/camera_icon" android:layout_width="fill_parent">
+
+    </ImageView>
+
+    <ImageView android:id="@+id/imageViewMain" android:layout_height="0dp"
+        android:layout_weight="4"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_launcher" android:layout_width="fill_parent">
+
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical|left"
+            android:id="@+id/cameraactivity_ivBack"
+            android:layout_margin="10dp"
+            android:src="@mipmap/back_icon"
+            />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:layout_margin="10dp"
+            android:layout_height="60dp"
+            android:layout_width="200dp"
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_borderWidth="0dp"
+            fancy:fb_defaultColor="@color/red1"
+            fancy:fb_focusColor="@color/darkred1"
+            android:id="@+id/cameraactivity_bAllImages"
+            android:fontFamily="sans-serif-light"
+            fancy:fb_iconPosition="top"
+            fancy:fb_radius="35dp"
+            android:gravity="center"
+            fancy:fb_text="All Photos"
+            fancy:fb_textSize="18sp"
+            fancy:fb_textColor="#FFFFFF"
+            android:layout_gravity="center" />
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical|right"
+            android:layout_margin="10dp"
+            android:id="@+id/cameraactivity_ivForward"
+            android:src="@mipmap/forward_icon"
+            />
+
+    </LinearLayout>
 
 </LinearLayout>
